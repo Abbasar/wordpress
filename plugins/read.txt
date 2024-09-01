@@ -1,1 +1,1 @@
-
+Use the Shortcode: Insert the shortcode [wps_product_slider limit="5" category="my-category-slug"] into a page or post and check if the products are filtered correctly.
