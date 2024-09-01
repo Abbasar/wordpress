@@ -1,1 +1,160 @@
+/* Hide scrollbar */
+.wps-slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.wps-slider::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
+}
+
+/* Arrow styles */
+.wps-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.wps-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.wps-prev {
+    left: 20px; /* Space from the left */
+}
+
+.wps-next {
+    right: 20px; /* Space from the right */
+}
+
+.wps-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Show arrows on hover of the slider wrapper */
+.wps-slider-wrapper:hover .wps-arrow {
+    opacity: 1;
+}
+
+.wps-slide {
+    flex: 0 0 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wps-slide:hover .wps-arrow {
+    opacity: 1; /* Show arrows on hover */
+}
+
+.wps-thumbnail {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* This makes the div a square */
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5; /* Fallback color if images don't load */
+}
+
+.wps-thumbnail img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.wps-title {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.wps-price {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.wps-regular-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+}
+
+.wps-sale-price {
+    color: #e60000;
+}
+
+.wps-add-to-cart {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.wps-add-to-cart:hover {
+    background-color: #005f8d;
+    color: rgb(216, 216, 216);
+}
+
+.wps-discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e60000;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+@media screen and (max-width: 600px) {
+    .wps-slide {
+        flex: 0 0 150px;
+    }
+}
+
+.wps-view-cart {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #1ae9bc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.wps-view-cart:hover {
+    background-color: #1ae9bc;
+}
 
