@@ -1,0 +1,77 @@
+/* custom css from Abdullah Basar */
+.add_to_cart_button {
+    display: block !important;
+    background-color:#0073aa !important;
+    border-radius: 2px !important;
+    color: white !important;
+}
+.rating{
+	justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+}
+.container{
+	padding-top:0 !important;
+}
+.woo-entry-inner{
+/* 	    border: 1px solid #f39a9a; */
+	box-shadow:0 0 5px !important;
+	display:flex;
+	flex-direction:column;
+	min-height:390px;
+}
+.woo-entry-image-main{
+	height:300px !important;
+}
+a:active, a:focus {
+  outline: 0 !important;
+  border: none !important;
+  -moz-outline-style: none !important;
+}
+.title{
+	overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+.title h2{
+		margin:0;
+	}
+.woo-entry-image-main{
+	padding:10px !important;
+	height:250px !important;
+	width:250px !important;
+/* 	so img ratio should be 1:1 */
+}
+.reset_variations{
+	margin-top:25px !important;
+}
+@media screen and (max-width:425px){
+	.oceanwp-toolbar{
+		
+    display: flex !important;
+    flex-direction: row !important;
+    column-gap: 10px !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+	}
+	.woocommerce-ordering{
+		height:34px !important;
+		margin:0 !important;
+	}
+	.woo-entry-image-main {
+		width: 200px !important;
+    height: 200px !important;
+		padding:10px !important;
+	}
+	.woo-entry-inner{
+		min-height:310px !important;
+	}
+	.woocommerce .has-product-nav span.onsale {
+        top: 1rem !important;
+        left: 1rem !important;
+    }
+	.woo-product-info{
+		padding:0 5px !important;
+	}
+	
+}
